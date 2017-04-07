@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA5EEEDA-4E1D-4C16-83AA-B731508CBEF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImobsyncDesktop</RootNamespace>
+    <AssemblyName>ImobsyncDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JSCore, Version=1.0.1.2, Culture=neutral, PublicKeyToken=d6b823da6d3fa04b" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\JSON\Net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenWebKitSharp, Version=3.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\open-webkit-sharp\Binary\OpenWebKitSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebKit.Interop, Version=536.0.0.0, Culture=neutral, PublicKeyToken=22198f6602307c03">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CepForm.Designer.cs">
+      <DependentUpon>CepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContaDTO.cs" />
+    <Compile Include="ContaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContaForm.Designer.cs">
+      <DependentUpon>ContaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formConta.Designer.cs">
+      <DependentUpon>formConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNavegador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNavegador.Designer.cs">
+      <DependentUpon>formNavegador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImovelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImovelControl.Designer.cs">
+      <DependentUpon>ImovelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImovelDTO.cs" />
+    <Compile Include="ImovelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImovelForm.Designer.cs">
+      <DependentUpon>ImovelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavegadorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavegadorUC.Designer.cs">
+      <DependentUpon>NavegadorUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CepForm.resx">
+      <DependentUpon>CepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContaForm.resx">
+      <DependentUpon>ContaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formConta.resx">
+      <DependentUpon>formConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNavegador.resx">
+      <DependentUpon>formNavegador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImovelControl.resx">
+      <DependentUpon>ImovelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImovelForm.resx">
+      <DependentUpon>ImovelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavegadorUC.resx">
+      <DependentUpon>NavegadorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
